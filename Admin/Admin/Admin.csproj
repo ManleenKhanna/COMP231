@@ -1,0 +1,516 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC7A9C72-D17D-41F7-9C71-934BBCA7FD8B}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Admin</RootNamespace>
+    <AssemblyName>Admin</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <NuGetPackageImportStamp>b1df5a29</NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.16.1.0.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit.HtmlEditor.Sanitizer">
+      <HintPath>..\packages\AjaxControlToolkit.HtmlEditor.Sanitizer.16.1.0.0\lib\net40\AjaxControlToolkit.HtmlEditor.Sanitizer.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.bootstrap">
+      <HintPath>..\packages\AspNet.ScriptManager.bootstrap.3.3.6\lib\net45\AspNet.ScriptManager.bootstrap.dll</HintPath>
+    </Reference>
+    <Reference Include="AspNet.ScriptManager.jQuery">
+      <HintPath>..\packages\AspNet.ScriptManager.jQuery.2.2.2\lib\net45\AspNet.ScriptManager.jQuery.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\packages\HtmlAgilityPack.1.4.9\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.ScriptManager.MSAjax">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.MSAjax.5.0.0\lib\net45\Microsoft.ScriptManager.MSAjax.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin.Master" />
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Categories\Default.aspx" />
+    <Content Include="Content\admin.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\calender.css" />
+    <Content Include="Content\currency-only.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\metisMenu.css" />
+    <Content Include="Content\metisMenu.min.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="Departments\Default.aspx" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="images\404.png" />
+    <Content Include="images\loader.gif" />
+    <Content Include="images\next.png" />
+    <Content Include="images\placeholderPdf0.png" />
+    <Content Include="images\placeholderPdf1.png" />
+    <Content Include="images\placeholderPicture.png" />
+    <Content Include="images\previous.png" />
+    <Content Include="Login.aspx" />
+    <Content Include="Products\Default.aspx" />
+    <Content Include="Scripts\admin.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.js" />
+    <Content Include="Scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\desktop.ini" />
+    <Content Include="fonts\desktop.ini" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\desktop.ini" />
+    <Content Include="Scripts\jquery-2.2.1.min.map" />
+    <None Include="Scripts\jquery-2.2.2.intellisense.js" />
+    <Content Include="Scripts\currency-only.js" />
+    <Content Include="Scripts\jquery-2.2.1.js" />
+    <Content Include="Scripts\jquery-2.2.1.min.js" />
+    <Content Include="Scripts\jquery-2.2.2.js" />
+    <Content Include="Scripts\jquery-2.2.2.min.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\masked-input.js" />
+    <Content Include="Scripts\metisMenu.js" />
+    <Content Include="Scripts\metisMenu.min.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="SubCategories\Default.aspx" />
+    <Content Include="svg\accessory-1.svg" />
+    <Content Include="svg\accessory-10.svg" />
+    <Content Include="svg\accessory-11.svg" />
+    <Content Include="svg\accessory-12.svg" />
+    <Content Include="svg\accessory-13.svg" />
+    <Content Include="svg\accessory-14.svg" />
+    <Content Include="svg\accessory-15.svg" />
+    <Content Include="svg\accessory-16.svg" />
+    <Content Include="svg\accessory-17.svg" />
+    <Content Include="svg\accessory-18.svg" />
+    <Content Include="svg\accessory-19.svg" />
+    <Content Include="svg\accessory-2.svg" />
+    <Content Include="svg\accessory-20.svg" />
+    <Content Include="svg\accessory-3.svg" />
+    <Content Include="svg\accessory-4.svg" />
+    <Content Include="svg\accessory-5.svg" />
+    <Content Include="svg\accessory-6.svg" />
+    <Content Include="svg\accessory-7.svg" />
+    <Content Include="svg\accessory-8.svg" />
+    <Content Include="svg\accessory-9.svg" />
+    <Content Include="svg\add.svg" />
+    <Content Include="svg\apron-and glove.svg" />
+    <Content Include="svg\apron.svg" />
+    <Content Include="svg\ax.svg" />
+    <Content Include="svg\bottle-1.svg" />
+    <Content Include="svg\bottle-2.svg" />
+    <Content Include="svg\bottle-3.svg" />
+    <Content Include="svg\bottle-4.svg" />
+    <Content Include="svg\bottle-5.svg" />
+    <Content Include="svg\bottle-6.svg" />
+    <Content Include="svg\bottle-7.svg" />
+    <Content Include="svg\bottle-8.svg" />
+    <Content Include="svg\bowl-1.svg" />
+    <Content Include="svg\bowl-10.svg" />
+    <Content Include="svg\bowl-11.svg" />
+    <Content Include="svg\bowl-12.svg" />
+    <Content Include="svg\bowl-13.svg" />
+    <Content Include="svg\bowl-14.svg" />
+    <Content Include="svg\bowl-15.svg" />
+    <Content Include="svg\bowl-16.svg" />
+    <Content Include="svg\bowl-17.svg" />
+    <Content Include="svg\bowl-18.svg" />
+    <Content Include="svg\bowl-19.svg" />
+    <Content Include="svg\bowl-2.svg" />
+    <Content Include="svg\bowl-20.svg" />
+    <Content Include="svg\bowl-21.svg" />
+    <Content Include="svg\bowl-22.svg" />
+    <Content Include="svg\bowl-23.svg" />
+    <Content Include="svg\bowl-24.svg" />
+    <Content Include="svg\bowl-25.svg" />
+    <Content Include="svg\bowl-26.svg" />
+    <Content Include="svg\bowl-27.svg" />
+    <Content Include="svg\bowl-28.svg" />
+    <Content Include="svg\bowl-29.svg" />
+    <Content Include="svg\bowl-3.svg" />
+    <Content Include="svg\bowl-30.svg" />
+    <Content Include="svg\bowl-31.svg" />
+    <Content Include="svg\bowl-4.svg" />
+    <Content Include="svg\bowl-5.svg" />
+    <Content Include="svg\bowl-6.svg" />
+    <Content Include="svg\bowl-7.svg" />
+    <Content Include="svg\bowl-8.svg" />
+    <Content Include="svg\bowl-9.svg" />
+    <Content Include="svg\bucket- for dessert.svg" />
+    <Content Include="svg\bucket-1.svg" />
+    <Content Include="svg\bucket-2.svg" />
+    <Content Include="svg\bucket-3.svg" />
+    <Content Include="svg\bucket-for tea.svg" />
+    <Content Include="svg\bucket-for vegatables.svg" />
+    <Content Include="svg\cancel.svg" />
+    <Content Include="svg\chef- 2.svg" />
+    <Content Include="svg\chef-1.svg" />
+    <Content Include="svg\chef-hat 1.svg" />
+    <Content Include="svg\chef-hat 2.svg" />
+    <Content Include="svg\chef-hat 3.svg" />
+    <Content Include="svg\chef-hat 4.svg" />
+    <Content Include="svg\chef-hat 5.svg" />
+    <Content Include="svg\chef-hat 6.svg" />
+    <Content Include="svg\chinese-food 1.svg" />
+    <Content Include="svg\chinese-food 2.svg" />
+    <Content Include="svg\clock.svg" />
+    <Content Include="svg\cloth.svg" />
+    <Content Include="svg\coffe-hot.svg" />
+    <Content Include="svg\coffe.svg" />
+    <Content Include="svg\cooking-1.svg" />
+    <Content Include="svg\cooking-2.svg" />
+    <Content Include="svg\cooking-3.svg" />
+    <Content Include="svg\cooking-4.svg" />
+    <Content Include="svg\cooking-5.svg" />
+    <Content Include="svg\cooking-6.svg" />
+    <Content Include="svg\cup-1.svg" />
+    <Content Include="svg\cup-2.svg" />
+    <Content Include="svg\cup-3.svg" />
+    <Content Include="svg\cutlery-1.svg" />
+    <Content Include="svg\cutlery-10.svg" />
+    <Content Include="svg\cutlery-11.svg" />
+    <Content Include="svg\cutlery-12.svg" />
+    <Content Include="svg\cutlery-13.svg" />
+    <Content Include="svg\cutlery-14.svg" />
+    <Content Include="svg\cutlery-15.svg" />
+    <Content Include="svg\cutlery-16.svg" />
+    <Content Include="svg\cutlery-17.svg" />
+    <Content Include="svg\cutlery-18.svg" />
+    <Content Include="svg\cutlery-19.svg" />
+    <Content Include="svg\cutlery-2.svg" />
+    <Content Include="svg\cutlery-20.svg" />
+    <Content Include="svg\cutlery-21.svg" />
+    <Content Include="svg\cutlery-22.svg" />
+    <Content Include="svg\cutlery-23.svg" />
+    <Content Include="svg\cutlery-24.svg" />
+    <Content Include="svg\cutlery-25.svg" />
+    <Content Include="svg\cutlery-26.svg" />
+    <Content Include="svg\cutlery-27.svg" />
+    <Content Include="svg\cutlery-3.svg" />
+    <Content Include="svg\cutlery-4.svg" />
+    <Content Include="svg\cutlery-5.svg" />
+    <Content Include="svg\cutlery-6.svg" />
+    <Content Include="svg\cutlery-7.svg" />
+    <Content Include="svg\cutlery-8.svg" />
+    <Content Include="svg\cutlery-9.svg" />
+    <Content Include="svg\cutting-board 1.svg" />
+    <Content Include="svg\cutting-board 2.svg" />
+    <Content Include="svg\cutting-board 3.svg" />
+    <Content Include="svg\delete.svg" />
+    <Content Include="svg\edit.svg" />
+    <Content Include="svg\electric-kettle.svg" />
+    <Content Include="svg\for-cake 1.svg" />
+    <Content Include="svg\for-cake 2.svg" />
+    <Content Include="svg\for-cheese.svg" />
+    <Content Include="svg\for-cream.svg" />
+    <Content Include="svg\for-fish.svg" />
+    <Content Include="svg\for-gamish.svg" />
+    <Content Include="svg\for-knife.svg" />
+    <Content Include="svg\for-meat 1.svg" />
+    <Content Include="svg\for-meat 2.svg" />
+    <Content Include="svg\for-pepper.svg" />
+    <Content Include="svg\for-potatoes 1.svg" />
+    <Content Include="svg\for-potatoes 2.svg" />
+    <Content Include="svg\for-salad.svg" />
+    <Content Include="svg\for-salt.svg" />
+    <Content Include="svg\for-soup 1.svg" />
+    <Content Include="svg\for-soup 2.svg" />
+    <Content Include="svg\forceps.svg" />
+    <Content Include="svg\forks-1.svg" />
+    <Content Include="svg\forks-2.svg" />
+    <Content Include="svg\forks-3.svg" />
+    <Content Include="svg\forks-for dessert.svg" />
+    <Content Include="svg\glass- 19.svg" />
+    <Content Include="svg\glass- 20.svg" />
+    <Content Include="svg\glass-1.svg" />
+    <Content Include="svg\glass-10.svg" />
+    <Content Include="svg\glass-11.svg" />
+    <Content Include="svg\glass-12.svg" />
+    <Content Include="svg\glass-13.svg" />
+    <Content Include="svg\glass-14.svg" />
+    <Content Include="svg\glass-15.svg" />
+    <Content Include="svg\glass-16.svg" />
+    <Content Include="svg\glass-17.svg" />
+    <Content Include="svg\glass-18.svg" />
+    <Content Include="svg\glass-2.svg" />
+    <Content Include="svg\glass-21.svg" />
+    <Content Include="svg\glass-22.svg" />
+    <Content Include="svg\glass-23.svg" />
+    <Content Include="svg\glass-24.svg" />
+    <Content Include="svg\glass-25.svg" />
+    <Content Include="svg\glass-26.svg" />
+    <Content Include="svg\glass-27.svg" />
+    <Content Include="svg\glass-28.svg" />
+    <Content Include="svg\glass-29.svg" />
+    <Content Include="svg\glass-3.svg" />
+    <Content Include="svg\glass-30.svg" />
+    <Content Include="svg\glass-4.svg" />
+    <Content Include="svg\glass-5.svg" />
+    <Content Include="svg\glass-6.svg" />
+    <Content Include="svg\glass-7.svg" />
+    <Content Include="svg\glass-8.svg" />
+    <Content Include="svg\glass-9.svg" />
+    <Content Include="svg\glove.svg" />
+    <Content Include="svg\hammer.svg" />
+    <Content Include="svg\knife-1.svg" />
+    <Content Include="svg\knife-10.svg" />
+    <Content Include="svg\knife-2.svg" />
+    <Content Include="svg\knife-3.svg" />
+    <Content Include="svg\knife-4.svg" />
+    <Content Include="svg\knife-5.svg" />
+    <Content Include="svg\knife-6.svg" />
+    <Content Include="svg\knife-7.svg" />
+    <Content Include="svg\knife-8.svg" />
+    <Content Include="svg\knife-9.svg" />
+    <Content Include="svg\knife-for pizza.svg" />
+    <Content Include="svg\menu.svg" />
+    <Content Include="svg\microwave.svg" />
+    <Content Include="svg\mixer-1.svg" />
+    <Content Include="svg\mixer-2.svg" />
+    <Content Include="svg\mixer-3.svg" />
+    <Content Include="svg\mixer-4.svg" />
+    <Content Include="svg\mixer-5.svg" />
+    <Content Include="svg\opener-1.svg" />
+    <Content Include="svg\opener-2.svg" />
+    <Content Include="svg\oven.svg" />
+    <Content Include="svg\pitcher-1.svg" />
+    <Content Include="svg\pitcher-2.svg" />
+    <Content Include="svg\pitcher-3.svg" />
+    <Content Include="svg\pitcher-4.svg" />
+    <Content Include="svg\pitcher-5.svg" />
+    <Content Include="svg\plate-1.svg" />
+    <Content Include="svg\plate-10.svg" />
+    <Content Include="svg\plate-11.svg" />
+    <Content Include="svg\plate-12.svg" />
+    <Content Include="svg\plate-2.svg" />
+    <Content Include="svg\plate-3.svg" />
+    <Content Include="svg\plate-4.svg" />
+    <Content Include="svg\plate-5.svg" />
+    <Content Include="svg\plate-6.svg" />
+    <Content Include="svg\plate-7.svg" />
+    <Content Include="svg\plate-8.svg" />
+    <Content Include="svg\plate-9.svg" />
+    <Content Include="svg\plate-hot.svg" />
+    <Content Include="svg\recipes-1.svg" />
+    <Content Include="svg\recipes-10.svg" />
+    <Content Include="svg\recipes-11.svg" />
+    <Content Include="svg\recipes-2.svg" />
+    <Content Include="svg\recipes-3.svg" />
+    <Content Include="svg\recipes-4.svg" />
+    <Content Include="svg\recipes-5.svg" />
+    <Content Include="svg\recipes-6.svg" />
+    <Content Include="svg\recipes-7.svg" />
+    <Content Include="svg\recipes-8.svg" />
+    <Content Include="svg\recipes-9.svg" />
+    <Content Include="svg\refrigerator.svg" />
+    <Content Include="svg\roller.svg" />
+    <Content Include="svg\scales-1.svg" />
+    <Content Include="svg\scales-2.svg" />
+    <Content Include="svg\stock-pot 1.svg" />
+    <Content Include="svg\tea-1.svg" />
+    <Content Include="svg\tea-2.svg" />
+    <Content Include="svg\teapot-1.svg" />
+    <Content Include="svg\teapot-2.svg" />
+    <Content Include="svg\the-scoop 1.svg" />
+    <Content Include="svg\the-scoop 2.svg" />
+    <Content Include="svg\the-scoop 3.svg" />
+    <Content Include="svg\toaster-1.svg" />
+    <Content Include="svg\toaster-2.svg" />
+    <Content Include="svg\update.svg" />
+    <Content Include="svg\vase-1.svg" />
+    <Content Include="svg\wine-opener.svg" />
+    <Content Include="Users\Default.aspx" />
+    <Content Include="Web.config" />
+    <Content Include="Scripts\jquery-2.2.2.min.map" />
+    <Content Include="Scripts\WebForms\desktop.ini" />
+    <Content Include="Scripts\WebForms\MSAjax\desktop.ini" />
+    <Content Include="svg\desktop.ini" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin.Master.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin.Master.designer.cs">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Categories\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Categories\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Departments\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Departments\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Products\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Products\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubCategories\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SubCategories\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Users\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Users\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1483</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:1483/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.1\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
